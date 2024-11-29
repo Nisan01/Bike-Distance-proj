@@ -7,183 +7,187 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
     color: #333;
-  }
+    height: 100vh; /* Full screen height */
+    overflow: hidden; /* Prevent scrolling on smaller devices */
+}
 
-  h1 {
-    font-size: 3rem;
-color: #0f0f0f;
-margin-bottom: 10px;
-text-transform: uppercase;
-font-family: fantasy;
-  }
+h1 {
+    font-size: 2.5rem;
+    color: #0f0f0f;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: fantasy;
+}
 
-  h2, h3 {
-    font-size: 1.5rem;
+h2, h3 {
+    font-size: 1.2rem;
     color: #4682b4;
-    margin: 20px 0;
-  
-   
-  }
+    margin: 15px 0;
+}
 
-  h2 {
-    margin-top: 30px;
-  }
+h2 {
+    margin-top: 20px;
+}
 
-  .div-container {
-    width: 60%;
+.div-container {
+    width: 90%; /* Decrease width for smaller devices */
     background-color: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-  }
+}
 
-  .day-container {
-    
+.day-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
     background-color: #e6f7ff;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
+    font-size: 0.9rem; /* Adjust font size */
+}
 
-  .day-container input[type="text"], .day-container input[type="number"] {
-    padding: 8px;
+.day-container input[type="text"], .day-container input[type="number"] {
+    padding: 5px;
     border-radius: 5px;
     border: 2px solid #1e90ff;
-    font-size: 1rem;
-    width: 50px;
-    margin-right: 10px;
+    font-size: 0.9rem; /* Reduce font size */
+    width: 40px;
+    margin-right: 5px;
     transition: border-color 0.3s;
-  }
+}
 
-  .day-container input[type="text"]:focus, .day-container input[type="number"]:focus {
+.day-container input[type="text"]:focus, .day-container input[type="number"]:focus {
     border-color: #4682b4;
     outline: none;
-  }
+}
 
-  .day-container .calculate {
+.day-container .calculate {
     background-color: #1e90ff;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .day-container .calculate:hover {
+.day-container .calculate:hover {
     background-color: #4682b4;
-  }
+}
 
-  .day-container .day-total {
+.day-container .day-total {
     font-weight: bold;
     color: #32cd32;
-  }
+}
 
-  button#add-item {
+button#add-item {
     background-color: #32cd32;
     color: white;
     border: none;
-    padding: 15px 25px;
+    padding: 12px 20px;
     border-radius: 8px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-bottom: 30px;
-  }
+    margin-bottom: 25px;
+}
 
-  button#add-item:hover {
+button#add-item:hover {
     background-color: #228b22;
-  }
+}
 
-  #total-distance {
-    font-size: 2rem;
+#total-distance {
+    font-size: 1.5rem;
     font-weight: bold;
     color: #ff6347;
     text-align: center;
-  }
+}
 
-  .total-distance-container {
-    margin-top: 30px;
-    padding: 20px;
+.total-distance-container {
+    margin-top: 20px;
+    padding: 15px;
     background-color: #fff;
-    width: 60%;
+    width: 90%; /* Adjust width */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     body {
-      padding: 20px;
+        padding: 10px;
+        height: auto;
     }
     .div-container {
-      width: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+    .day-container {
+        font-size: 0.8rem; /* Adjust font size */
+        padding: 6px;
+    }
+    .day-container input[type="text"], .day-container input[type="number"] {
+        width: 30px; /* Decrease width */
+    }
+    .day-container .calculate {
+        padding: 6px 10px;
+        font-size: 0.8rem; /* Decrease font size */
+    }
+    button#add-item {
+        padding: 10px 15px;
+        font-size: 1rem; /* Adjust size */
     }
     #total-distance {
-      font-size: 1.5rem;
+        font-size: 1.2rem; /* Decrease font size */
     }
-  }
-
-
-.day::placeholder{
-font-size: 0.6rem;
-text-align: center;
-
-}
-#bike-name::placeholder{
-font-size: 0.5rem;
-text-align: center;
-}
-#bike-name {
-font-size: 1.2rem;
-padding: 10px;
-margin: 20px 0;
-border: 2px solid #4682b4;
-border-radius: 5px;
-width: 60%;
-text-align: center;
+    #bike-name {
+        width: 80%; /* Adjust width */
+        font-size: 1rem; /* Adjust font size */
+        padding: 8px;
+    }
+    h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+    h2, h3 {
+        font-size: 1rem; /* Adjust font size */
+    }
+    #bike-header {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+    #bike-name::placeholder {
+        font-size: 0.8rem;
+    }
 }
 
-#bike-header {
-display: none;
-font-size: 2rem;
-font-weight: bold;
-color: #4682b4;
-margin: 20px 0;
-text-align: center;
-}
-
-.header-wrapper {
-display: flex;
-
-align-items: center;
-}
-
-.header-wrapper i {
-display: none;
-cursor: pointer;
-font-size: 1.2rem;
-color: #979a9d;
-margin-bottom: 0.2rem;
-margin-left: 30px;
-}
-
-.header-wrapper i:hover {
-color: #1e90ff;
-}
-
-#bike-name::placeholder{
-font-size: 0.8rem;
-text-transform: uppercase;
-}
-h3#bottom-line-heading{
-text-transform: uppercase;
+/* Extra small devices (mobile phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2, h3 {
+        font-size: 1rem;
+    }
+    .div-container {
+        width: 100%;
+    }
+    .day-container {
+        font-size: 0.5rem;
+        padding: 5px;
+    }
+    .day-container input[type="text"], .day-container input[type="number"] {
+        width: 25px;
+    }
+    button#add-item {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    #total-distance {
+        font-size: 1rem;
+    }
 }
